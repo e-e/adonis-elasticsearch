@@ -20,13 +20,17 @@ ELASTIC_SEARCH_URL=http://localhost:9200
 
 ## Registering the provider
 
-Make sure to register the provider inside `start/app.js` file.
+Make sure to register the provider inside `.adonisrc.json` file.
 
-```js
-const providers = [
+```jsonc
+{
   // ...
-  "adonis-v5-elasticsearch/providers/ElasticProvider",
-];
+  "providers": {
+    // "...",
+    "adonis-v5-elasticsearch/providers/ElasticProvider"
+  },
+  // ...
+}
 ```
 
 That's all! Now you can use the provider by pulling it from IoC container
@@ -49,10 +53,11 @@ const response: ApiResponse = await Elastic.search({
 
 The `Elastic.paginate()` helper will paginate the results and return the same payload as Lucid's pagination method.
 
-```js
-const Elastic = use("Elastic");
+```ts
+import { ApiResponse } from "@elastic/elasticsearch";
+import Elastic from "@ioc:Elastic";
 
-const response = await Elastic.search({
+const response: ApiResponse = await Elastic.search({
   index: "my-index",
   body: {
     query: {
@@ -66,7 +71,7 @@ return Elastic.paginate(response);
 
 ## Contributing
 
-You are more than welcome to contribute to Vue Flags. Just submit changes via pull request and I will review them before merging.
+You are more than welcome to contribute to `adonis-v5-elasticsearch`. Just submit changes via pull request and I will review them before merging.
 
 1. Fork it! 🤙
 
@@ -77,8 +82,6 @@ You are more than welcome to contribute to Vue Flags. Just submit changes via pu
 4. Push to the branch: `git push origin my-new-feature`
 
 5. Submit a pull request 👍
-
-The documentation is available in the `docs` folder. The Vue Flags components are available in the `lib` folder.
 
 ## License
 
