@@ -1,4 +1,4 @@
-import { Client, ClientOptions } from "@elastic/elasticsearch";
+import { Client, ClientOptions, ApiResponse } from "@elastic/elasticsearch";
 
 export interface AdonisElasticClient extends Client {
   paginate(response): PaginatedResults;
@@ -17,7 +17,7 @@ export class AdonisElasticClient extends Client implements AdonisElasticClient {
     super(opts);
   }
 
-  paginate(response): PaginatedResults {
+  paginate(response: ApiResponse): PaginatedResults {
     const queryString = response.meta.request.params.querystring;
     const params = new URLSearchParams(queryString);
 
