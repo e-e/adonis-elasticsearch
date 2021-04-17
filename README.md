@@ -25,16 +25,17 @@ Make sure to register the provider inside `start/app.js` file.
 ```js
 const providers = [
   // ...
-  "adonis-elasticsearch/providers/ElasticProvider",
+  "adonis-v5-elasticsearch/providers/ElasticProvider",
 ];
 ```
 
 That's all! Now you can use the provider by pulling it from IoC container
 
-```js
-const Elastic = use("Elastic");
+```ts
+import { ApiResponse } from "@elastic/elasticsearch";
+import Elastic from "@ioc:Elastic";
 
-const response = await Elastic.search({
+const response: ApiResponse = await Elastic.search({
   index: "my-index",
   body: {
     query: {
