@@ -1,10 +1,10 @@
 import { Client, ClientOptions, ApiResponse } from "@elastic/elasticsearch";
 
-export interface AdonisElasticClient extends Client {
+interface AdonisElasticClientInterface extends Client {
   paginate(response): PaginatedResults;
 }
 
-export interface PaginatedResults {
+interface PaginatedResults {
   total: number;
   perPage: number;
   page: number;
@@ -12,7 +12,9 @@ export interface PaginatedResults {
   data: any[];
 }
 
-export class AdonisElasticClient extends Client implements AdonisElasticClient {
+export class AdonisElasticClient
+  extends Client
+  implements AdonisElasticClientInterface {
   constructor(opts: ClientOptions) {
     super(opts);
   }
