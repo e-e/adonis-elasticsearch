@@ -7,7 +7,7 @@ It is built on top of @elastic/elasticsearch and proxies all the methods keeping
 ## Installation
 
 ```bash
-npm install adonis-elasticsearch
+npm install adonis-v5-elasticsearch
 ```
 
 ## Set the environment variable
