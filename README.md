@@ -12,10 +12,10 @@ npm install adonis-elasticsearch
 
 ## Set the environment variable
 
-Make sure you set the `ES_URL` environment variable in your .env file. This will be used to access your Elasticsearch server.
+Make sure you set the `ELASTIC_SEARCH_URL` environment variable in your .env file. This will be used to access your Elasticsearch server.
 
 ```bash
-ES_URL=http://localhost:9200
+ELASTIC_SEARCH_URL=http://localhost:9200
 ```
 
 ## Registering the provider

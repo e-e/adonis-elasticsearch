@@ -1,25 +1,31 @@
 {
   "private": false,
-  "version": "0.0.1",
-  "name": "adonis-elasticsearch",
+  "version": "1.0.0",
+  "name": "adonis-v5-elasticsearch",
   "description": "Elasticsearch Service Provider for Adonis with additional features",
   "author": "ProspectWith <product@prospectwith.com>",
+  "contributors": [
+    "e-e <god@eric.wtf>"
+  ],
   "license": "MIT",
   "keywords": [
     "adonisjs",
     "elasticsearch",
-    "service provider"
+    "service provider",
+    "adonisjs-v5"
   ],
-  "homepage": "https://github.com/prospectwith/adonis-elasticsearch",
+  "homepage": "https://github.com/e-e/adonis-elasticsearch",
   "repository": {
     "type": "git",
-    "url": "https://github.com/prospectwith/adonis-elasticsearch.git"
+    "url": "https://github.com/e-e/adonis-elasticsearch.git"
   },
   "bugs": {
-    "email": "julien.le.coupanec@gmail.com",
-    "url": "https://github.com/prospectwith/adonis-elasticsearch/issues"
+    "url": "https://github.com/e-e/adonis-elasticsearch/issues"
   },
   "dependencies": {
-    "@elastic/elasticsearch": "^7.7.1"
+    "@elastic/elasticsearch": "^7.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.5"
   }
 }
