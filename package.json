@@ -2,7 +2,7 @@
   "private": false,
   "version": "1.0.0",
   "name": "adonis-v5-elasticsearch",
-  "description": "Elasticsearch Service Provider for Adonis with additional features",
+  "description": "Elasticsearch Service Provider for AdonisJS v5 with additional features",
   "author": "ProspectWith <product@prospectwith.com>",
   "contributors": [
     "e-e <god@eric.wtf>"
